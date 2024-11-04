@@ -143,3 +143,12 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
             console.log("An error occurred: " + error.message);
         });
 });
+
+
+const pageLoaded = () => {
+    // Remove loader
+    const loader = document.getElementById('loader_block');
+    loader.style.opacity = '0';
+    setTimeout(() => loader.style.display = 'none', 300);
+}
+window.addEventListener('load', pageLoaded);
